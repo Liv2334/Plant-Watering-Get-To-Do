@@ -74,3 +74,9 @@ body {
     color: #FAF8EE;
     text-shadow: 2px 2px #e8c27a;
 }
+.info-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
