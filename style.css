@@ -45,3 +45,6 @@ body {
     mask-size: 100% 100%;
     background-color: #ff9066;
 }
+.big-title {
+    font-size: 60px;
+}
