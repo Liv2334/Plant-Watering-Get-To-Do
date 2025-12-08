@@ -5,6 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro Page</title>
+
+<style>
+        .top-image {
+            width: 100%;
+            display: block;
+            height: 400px;
+            object-fit: cover;
+        }
+        .center {
+        text-align: center;
+    }
+    
+        .center-buttons {
+            text-align: center;
+        }
+
+        .center-buttons a {
+            display: inline-block;
+            margin: 5px;
+        }
+
+</style>
+
+
+
+
 </head>
 
 <!--
@@ -13,32 +39,36 @@ pink buttons and light orange buttons?? with green accents??
 
 <body>
 
-    <h1>Welcome to the Plant Waterer!</h1>
-       
+    <h1 class="center">Plant Waterer</h1>
+
+
+    <img src="PlantGirl.webp" class="top-image" alt="Girl with plants">
+
+    
+
+
+    <h1 class="center">Welcome to the Plant Waterer!</h1>
+    <div class="center-buttons">  
     <a href="getToDo.html">
-    <button class="header item" type="button">Get To Do!</button>
+    <button class="header item" type="button" class="center-buttons">Get To Do!</button>
     </a>
 
     <a href="whatI'veDone.html">
-    <button class="header item" type="button">What I've Done!</button>
+    <button class="header item" type="button" class="center-buttons">What I've Done!</button>
     </a>
 
     <a href="myPlants.html">
-    <button class="header item" type="button">Plants I've Collected!</button>
+    <button class="header item" type="button" class="center-buttons">Plants I've Collected!</button>
     </a>
     
     <a href="checkOnPlant.html">
-    <button class="header item" type="button">How is my plant?</button>
+    <button class="header item" type="button" class="center-buttons">How is my plant?</button>
     </a>
+    </div>
 
-
-    <h2>Add your tasks to do, and as you check them off,
+    <h2 class="center">Add your tasks to do, and as you check them off,
         your plant will get watered, and you'll have the
         opportunity to win more plants!</h2>
-
-    <img src="PlantGirl.webp" alt="Girl with plants" width="1500" height="650">
-
-    
 
 </body>
 </html>
