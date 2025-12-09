@@ -8,7 +8,7 @@ taskInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") addTask();
 });
 
-// Make sure finishedTasks storage exists
+// Make sure finishedTasks exists
 if (!localStorage.getItem("finishedTasks")) {
     localStorage.setItem("finishedTasks", JSON.stringify([]));
 }
@@ -18,8 +18,7 @@ function addTask() {
     if (taskText === "") return;
 
     const li = document.createElement("li");
-    
-    // Put the text in a span so the button doesn't overwrite it
+
     const span = document.createElement("span");
     span.textContent = taskText;
     li.appendChild(span);
@@ -29,8 +28,8 @@ function addTask() {
     finishBtn.className = "delete-btn";
 
     finishBtn.addEventListener("click", () => {
-        saveFinishedTask(taskText); // Save to localStorage
-        li.remove(); // Remove from current list
+        saveFinishedTask(taskText);
+        li.remove();
     });
 
     li.appendChild(finishBtn);

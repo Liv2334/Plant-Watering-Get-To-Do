@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,26 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-    <h1>Here's all the things you've acomplished!!</h1>
+    <h1 class="center big-title">Here's all the things you've accomplished!!</h1>
 
+    <!-- THE LIST THAT JS WILL FILL -->
+    <ul id="finishedList" class="todo-container"></ul>
+
+    <div class="center-buttons">
+        <a href="index.html">
+            <button class="diamond-button" type="button">Go to the Plant!</button>
+        </a>
+    </div>
 
     <script>
-    const finishedList = document.getElementById("finishedList");
-    const finishedTasks = JSON.parse(localStorage.getItem("finishedTasks")) || [];
+        const finishedList = document.getElementById("finishedList");
+        const finishedTasks = JSON.parse(localStorage.getItem("finishedTasks")) || [];
 
-    finishedTasks.forEach(task => {
-        const li = document.createElement("li");
-        li.textContent = task;
-        finishedList.appendChild(li);
-    });
-</script>
-
-    <a href="index.html">
-    <button class="header item" type="button">Go to the Plant!</button>
-    </a>
+        finishedTasks.forEach(task => {
+            const li = document.createElement("li");
+            li.textContent = task;
+            finishedList.appendChild(li);
+        });
+    </script>
 
 </body>
 </html>
