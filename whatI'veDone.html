@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 
 
@@ -7,12 +7,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What I've done</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
 
     <h1>Here's all the things you've acomplished!!</h1>
+
+
+    <script>
+    const finishedList = document.getElementById("finishedList");
+    const finishedTasks = JSON.parse(localStorage.getItem("finishedTasks")) || [];
+
+    finishedTasks.forEach(task => {
+        const li = document.createElement("li");
+        li.textContent = task;
+        finishedList.appendChild(li);
+    });
+</script>
 
     <a href="index.html">
     <button class="header item" type="button">Go to the Plant!</button>

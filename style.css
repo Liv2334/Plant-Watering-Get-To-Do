@@ -80,3 +80,71 @@ body {
     right: 20px;
     z-index: 1000;
 }
+
+
+.todo-container {
+    max-width: 400px;
+    margin: 30px auto;
+    background: #FAF8EE;
+    padding: 20px;
+    border-radius: 12px;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #fc8c4b;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.add-task-btn {
+    padding: 12px 18px;
+    border: none;
+    background-color: #fc8c4b;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-task-btn:hover {
+    background-color: #fa6b19;
+}
+
+#taskList {
+    margin-top: 15px;
+    padding: 0;
+}
+
+#taskList li {
+    list-style: none;
+    background: #ffe4d3;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}
+
+.delete-btn {
+    background: crimson;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #b60000;
+}
