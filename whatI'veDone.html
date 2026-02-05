@@ -12,23 +12,32 @@
 
     <h1 class="center big-title">Here's all the things you've accomplished!!</h1>
 
-    <!-- THE LIST THAT JS WILL FILL -->
     <ul id="finishedList" class="todo-container"></ul>
 
     <div class="center-buttons">
         <a href="index.html">
             <button class="diamond-button" type="button">Go to the Plant!</button>
         </a>
+
+        <button class="diamond-button" id="clearBtn" type="button">Clear All</button>
     </div>
 
     <script>
         const finishedList = document.getElementById("finishedList");
+
         const finishedTasks = JSON.parse(localStorage.getItem("finishedTasks")) || [];
 
         finishedTasks.forEach(task => {
             const li = document.createElement("li");
             li.textContent = task;
             finishedList.appendChild(li);
+        });
+
+
+        document.getElementById("clearBtn").addEventListener("click", () => {
+            localStorage.removeItem("finishedTasks");
+            finishedList.innerHTML = "";
+            alert("All completed tasks have been cleared!");
         });
     </script>
 

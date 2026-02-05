@@ -8,7 +8,6 @@ taskInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") addTask();
 });
 
-// Make sure finishedTasks exists
 if (!localStorage.getItem("finishedTasks")) {
     localStorage.setItem("finishedTasks", JSON.stringify([]));
 }
@@ -43,3 +42,16 @@ function saveFinishedTask(task) {
     finished.push(task);
     localStorage.setItem("finishedTasks", JSON.stringify(finished));
 }
+    const finishedList = document.getElementById("finishedList");
+    const finishedTasks = JSON.parse(localStorage.getItem("finishedTasks")) || [];
+    finishedTasks.forEach(task => {
+        const li = document.createElement("li");
+        li.textContent = task;
+        finishedList.appendChild(li);
+    });
+
+    document.getElementById("clearBtn").addEventListener("click", () => {
+        localStorage.removeItem("finishedTasks");
+        finishedList.innerHTML = "";
+        alert("All completed tasks have been cleared!");
+    });

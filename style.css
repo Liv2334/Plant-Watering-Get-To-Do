@@ -55,6 +55,11 @@
     text-align: center;
 }
 
+.gen_info_center {
+    text-align: center;
+    margin-top: 200px;
+}
+
 .center-buttons {
     text-align: center;
 }
