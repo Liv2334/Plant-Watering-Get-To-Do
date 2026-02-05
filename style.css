@@ -153,3 +153,23 @@ body {
 .delete-btn:hover {
     background: #b60000;
 }
+
+.question-square {
+    width: 60px;
+    height: 60px;
+   background-color: #e6e6e6;
+    border: 2px solid #FAF8EE;
+    color: #fc8c4b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.question-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
