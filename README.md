@@ -6,7 +6,7 @@ A plant where every time you do something that you're working toward and check i
 
 # What there is still to do
 - link to the original picture's artist
-- add back button on get to page(what I get to do!)
+- adjust visuals of index page
 - create some flowers for user to discover
 - make intro page giving mini explanation
 - make into browser extension
